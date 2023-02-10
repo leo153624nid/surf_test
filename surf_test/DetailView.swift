@@ -8,21 +8,27 @@
 import UIKit
 
 class DetailView: UIView {
-    
-//    var width : CGFloat
-//    var height : CGFloat
 
-   let detailView = UIView()
+    
+    let headerDetailView = HeaderDetailView()
     
     init() {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)
         self.layer.cornerRadius = 30
+        
+        self.addSubview(headerDetailView)
+        
+        setup()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setup() {
+        headerDetailView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
     }
     
 }
