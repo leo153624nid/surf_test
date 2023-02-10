@@ -11,6 +11,8 @@ class DetailView: UIView {
 
     
     let headerDetailView = HeaderDetailView()
+    let sectionDetailView = SectionDetailView()
+    let footerDetailView = FooterDetailView()
     
     init() {
         super.init(frame: .zero)
@@ -19,6 +21,8 @@ class DetailView: UIView {
         self.layer.cornerRadius = 30
         
         self.addSubview(headerDetailView)
+        self.addSubview(sectionDetailView)
+        self.addSubview(footerDetailView)
         
         setup()
     }
@@ -33,10 +37,17 @@ class DetailView: UIView {
         headerDetailView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
         headerDetailView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
         
-        // setup carousel
+        // setup SectionDetailView
+        sectionDetailView.bottomAnchor.constraint(equalTo: footerDetailView.topAnchor).isActive = true
+        sectionDetailView.topAnchor.constraint(equalTo: headerDetailView.bottomAnchor, constant: 20).isActive = true
+        sectionDetailView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
+        sectionDetailView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
         
         // setup FooterDetailView
-        
+        footerDetailView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -58).isActive = true
+        footerDetailView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        footerDetailView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
+        footerDetailView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
     }
     
 }
