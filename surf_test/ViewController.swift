@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     func setupMainView() {
-        let detailHeight = (UIScreen.main.bounds.height - mainImageView.bounds.height + 130 - footerView.bounds.height) > 276 ? (UIScreen.main.bounds.height - mainImageView.bounds.height + 130 - footerView.bounds.height) : 276
+        let detailHeight = (UIScreen.main.bounds.height - mainImageView.bounds.height + 130) > 276 ? (UIScreen.main.bounds.height - mainImageView.bounds.height + 130) : 276
         
         // setup MainImageView
         mainImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         print(mainImageView.bounds.height)
         
         // setup DetailView
-        detailView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -58).isActive = true
+        detailView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         detailView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         detailView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         detailView.heightAnchor.constraint(equalToConstant: detailHeight).isActive = true

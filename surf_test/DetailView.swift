@@ -17,7 +17,8 @@ class DetailView: UIView {
     init() {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = .blue
+        self.backgroundColor = #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)
+        self.layer.cornerRadius = 30
     }
     
     required init?(coder: NSCoder) {
