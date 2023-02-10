@@ -22,7 +22,10 @@ class FooterDetailView: UIView {
     let button : UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-//        button.titleLabel = "Хочешь к нам?"
+        button.backgroundColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        button.setTitle("Отправить заявку", for: .normal)
+        button.titleLabel?.font = UIFont(name: "SFProDisplay-Regular", size: 36)
+        button.tintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1) // todo
 //        button.font = UIFont(name: "SFProDisplay-Regular", size: 16)
 //        button.textColor = #colorLiteral(red: 0.5882352941, green: 0.5843137255, blue: 0.6078431373, alpha: 1)
         
@@ -35,6 +38,7 @@ class FooterDetailView: UIView {
         self.backgroundColor = #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)
         
         self.addSubview(desc)
+        self.addSubview(button)
         
         setup()
         
