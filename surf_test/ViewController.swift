@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     let mainImageView = MainImageView()
     let detailView = DetailView()
-    let footerView = FooterView()
+//    let footerView = FooterView()
     
     
     override func viewDidLoad() {
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         view.addSubview(mainImageView)
         view.addSubview(detailView)
-        view.addSubview(footerView)
+//        view.addSubview(footerView)
         
         setupMainView()
         
@@ -42,10 +42,10 @@ class ViewController: UIViewController {
         detailView.heightAnchor.constraint(equalToConstant: detailHeight).isActive = true
         
         // setup FooterView
-        footerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        footerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        footerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        footerView.heightAnchor.constraint(equalToConstant: 58).isActive = true
+//        footerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        footerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        footerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//        footerView.heightAnchor.constraint(equalToConstant: 58).isActive = true
     }
 
 
