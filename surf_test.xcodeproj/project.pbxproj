@@ -20,6 +20,8 @@
 		FACB8BCD2996B7F400B2E7DD /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FACB8BCC2996B7F400B2E7DD /* SF-Pro-Display-Regular.otf */; };
 		FACB8BD12996B9FD00B2E7DD /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FACB8BD02996B9FD00B2E7DD /* SF-Pro-Display-Bold.otf */; };
 		FACB8BD42996BA5300B2E7DD /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FACB8BD32996BA5300B2E7DD /* SF-Pro-Display-Medium.otf */; };
+		FACB8BD72996C97200B2E7DD /* SectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BD62996C97200B2E7DD /* SectionDetailView.swift */; };
+		FACB8BDA2996CA7C00B2E7DD /* FooterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BD92996CA7C00B2E7DD /* FooterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FACB8BCC2996B7F400B2E7DD /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		FACB8BD02996B9FD00B2E7DD /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
 		FACB8BD32996BA5300B2E7DD /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		FACB8BD62996C97200B2E7DD /* SectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailView.swift; sourceTree = "<group>"; };
+		FACB8BD92996CA7C00B2E7DD /* FooterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				FACB8BAB2996351800B2E7DD /* ViewController.swift */,
 				FACB8BC22996904D00B2E7DD /* FooterView.swift */,
 				FACB8BBF29967DD100B2E7DD /* DetailView.swift */,
+				FACB8BD92996CA7C00B2E7DD /* FooterDetailView.swift */,
+				FACB8BD62996C97200B2E7DD /* SectionDetailView.swift */,
 				FACB8BC52996ABB600B2E7DD /* HeaderDetailView.swift */,
 				FACB8BBC2996635900B2E7DD /* MainImageView.swift */,
 				FACB8BAD2996351800B2E7DD /* Main.storyboard */,
@@ -174,6 +180,8 @@
 				FACB8BA82996351800B2E7DD /* AppDelegate.swift in Sources */,
 				FACB8BC32996904D00B2E7DD /* FooterView.swift in Sources */,
 				FACB8BC62996ABB600B2E7DD /* HeaderDetailView.swift in Sources */,
+				FACB8BD72996C97200B2E7DD /* SectionDetailView.swift in Sources */,
+				FACB8BDA2996CA7C00B2E7DD /* FooterDetailView.swift in Sources */,
 				FACB8BC029967DD100B2E7DD /* DetailView.swift in Sources */,
 				FACB8BAA2996351800B2E7DD /* SceneDelegate.swift in Sources */,
 			);
