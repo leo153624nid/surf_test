@@ -61,6 +61,6 @@ class HeaderDetailView: UIView {
         desc.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 12).isActive = true
         desc.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         desc.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-//        desc.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        desc.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
 }
