@@ -23,10 +23,10 @@ class ViewController: UIViewController {
         
         setupMainView()
         
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family: \(family) font names: \(names)")
-        }
+//        for family in UIFont.familyNames.sorted() {
+//            let names = UIFont.fontNames(forFamilyName: family)
+//            print("Family: \(family) font names: \(names)")
+//        }
         
     }
     
