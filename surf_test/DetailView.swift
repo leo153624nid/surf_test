@@ -28,7 +28,10 @@ class DetailView: UIView {
     }
     
     func setup() {
-        headerDetailView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
+        headerDetailView.topAnchor.constraint(equalTo: self.topAnchor, constant: 24).isActive = true
+        headerDetailView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
+        headerDetailView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 20).isActive = true
+        
     }
     
 }
