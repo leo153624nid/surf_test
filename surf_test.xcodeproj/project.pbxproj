@@ -15,6 +15,7 @@
 		FACB8BB42996351B00B2E7DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB8BB22996351B00B2E7DD /* LaunchScreen.storyboard */; };
 		FACB8BBD2996635900B2E7DD /* MainImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BBC2996635900B2E7DD /* MainImageView.swift */; };
 		FACB8BC029967DD100B2E7DD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BBF29967DD100B2E7DD /* DetailView.swift */; };
+		FACB8BC32996904D00B2E7DD /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BC22996904D00B2E7DD /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FACB8BB52996351B00B2E7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACB8BBC2996635900B2E7DD /* MainImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageView.swift; sourceTree = "<group>"; };
 		FACB8BBF29967DD100B2E7DD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FACB8BC22996904D00B2E7DD /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FACB8BA72996351800B2E7DD /* AppDelegate.swift */,
 				FACB8BA92996351800B2E7DD /* SceneDelegate.swift */,
 				FACB8BAB2996351800B2E7DD /* ViewController.swift */,
+				FACB8BC22996904D00B2E7DD /* FooterView.swift */,
 				FACB8BBF29967DD100B2E7DD /* DetailView.swift */,
 				FACB8BBC2996635900B2E7DD /* MainImageView.swift */,
 				FACB8BAD2996351800B2E7DD /* Main.storyboard */,
@@ -146,6 +149,7 @@
 				FACB8BAC2996351800B2E7DD /* ViewController.swift in Sources */,
 				FACB8BBD2996635900B2E7DD /* MainImageView.swift in Sources */,
 				FACB8BA82996351800B2E7DD /* AppDelegate.swift in Sources */,
+				FACB8BC32996904D00B2E7DD /* FooterView.swift in Sources */,
 				FACB8BC029967DD100B2E7DD /* DetailView.swift in Sources */,
 				FACB8BAA2996351800B2E7DD /* SceneDelegate.swift in Sources */,
 			);
