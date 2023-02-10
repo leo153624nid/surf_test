@@ -9,16 +9,14 @@ import UIKit
 
 class DetailView: UIView {
     
-    var width : CGFloat
-    var height : CGFloat
+//    var width : CGFloat
+//    var height : CGFloat
 
-//   let detailView = UIView(frame: <#T##CGRect#>)
+   let detailView = UIView()
     
-    init(width: CGFloat, height: CGFloat) {
-        self.width = width
-        self.height = height
-        super.init(frame: .init(x: 10, y: 10, width: width, height: height))
- 
+    init() {
+        super.init(frame: .zero)
+        self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = .blue
     }
     
