@@ -23,6 +23,7 @@ class FooterDetailView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        button.layer.cornerRadius = 30
         button.titleLabel?.font = UIFont(name: "SFProDisplay-Regular", size: 16)
         button.setTitle("Отправить заявку", for: .normal)
         button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
@@ -58,7 +59,7 @@ class FooterDetailView: UIView {
         // setup description
         desc.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         desc.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-        desc.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        desc.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.33).isActive = true
         desc.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
 
