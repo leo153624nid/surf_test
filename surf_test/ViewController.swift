@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     let mainImageView = MainImageView()
     let detailView = DetailView()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,8 +21,6 @@ class ViewController: UIViewController {
         setupMainView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(showAlert), name: .notificationFromFooterDetailView, object: nil)
-        
-        
     }
     
     func setupMainView() {
