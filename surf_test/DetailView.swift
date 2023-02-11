@@ -39,7 +39,7 @@ class DetailView: UIView {
         headerDetailView.heightAnchor.constraint(equalToConstant: 104).isActive = true
         
         // setup SectionDetailView
-        sectionDetailView.bottomAnchor.constraint(equalTo: footerDetailView.topAnchor).isActive = true
+        sectionDetailView.bottomAnchor.constraint(equalTo: footerDetailView.topAnchor, constant: -20).isActive = true
         sectionDetailView.topAnchor.constraint(equalTo: headerDetailView.bottomAnchor, constant: 20).isActive = true
         sectionDetailView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
         sectionDetailView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
