@@ -29,9 +29,20 @@ class FooterDetailView: UIView {
         button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         button.setTitle("Обработка...", for: .highlighted)
         button.setTitleColor(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), for: .highlighted)
+        button.addTarget(self, action: #selector(buttonIsPressed), for: .touchDown)
+        button.addTarget(self, action: #selector(buttonIsTapped), for: .touchUpInside)
         
         return button
     }()
+    
+    @objc func buttonIsPressed(sender: UIButton) {
+        print("button is pressed")
+    }
+    
+    @objc func buttonIsTapped(sender: UIButton) {
+        print("button is tapped")
+        NotificationCenter.default.post(Notification.init(name: .notificationFromFooterDetailView))
+    }
 
     init() {
         super.init(frame: .zero)
@@ -42,7 +53,6 @@ class FooterDetailView: UIView {
         self.addSubview(button)
         
         setup()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -62,5 +72,7 @@ class FooterDetailView: UIView {
         desc.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.33).isActive = true
         desc.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
+    
+    
 
 }

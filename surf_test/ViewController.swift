@@ -11,22 +11,18 @@ class ViewController: UIViewController {
 
     let mainImageView = MainImageView()
     let detailView = DetailView()
-//    let footerView = FooterView()
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(mainImageView)
         view.addSubview(detailView)
-//        view.addSubview(footerView)
         
         setupMainView()
         
-//        for family in UIFont.familyNames.sorted() {
-//            let names = UIFont.fontNames(forFamilyName: family)
-//            print("Family: \(family) font names: \(names)")
-//        }
+        NotificationCenter.default.addObserver(self, selector: #selector(showAlert), name: .notificationFromFooterDetailView, object: nil)
+        
         
     }
     
@@ -37,22 +33,29 @@ class ViewController: UIViewController {
         mainImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         mainImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         mainImageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-//        mainImageView.heightAnchor.constraint(equalToConstant: mainImageView.bounds.height).isActive = true
-        print(mainImageView.bounds.height)
         
         // setup DetailView
         detailView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         detailView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         detailView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         detailView.heightAnchor.constraint(equalToConstant: detailHeight).isActive = true
-        
-        // setup FooterView
-//        footerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        footerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//        footerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//        footerView.heightAnchor.constraint(equalToConstant: 58).isActive = true
+    }
+    
+    @objc func showAlert(notification: Notification) {
+        if notification.name == Notification.Name.notificationFromFooterDetailView {
+            let alertController = UIAlertController(title: "1", message: "2", preferredStyle: .alert)
+            let action = UIAlertAction(title: "3", style: .default, handler: { action in
+                print("action")
+            })
+            
+            alertController.addAction(action)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 
 
 }
 
+extension Notification.Name {
+    static let notificationFromFooterDetailView = Notification.Name("notificationFromFooterDetailView")
+}

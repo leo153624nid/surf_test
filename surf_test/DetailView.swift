@@ -9,7 +9,6 @@ import UIKit
 
 class DetailView: UIView {
 
-    
     let headerDetailView = HeaderDetailView()
     let sectionDetailView = SectionDetailView()
     let footerDetailView = FooterDetailView()
