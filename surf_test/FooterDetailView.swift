@@ -23,11 +23,11 @@ class FooterDetailView: UIView {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        button.titleLabel?.font = UIFont(name: "SFProDisplay-Regular", size: 16)
         button.setTitle("Отправить заявку", for: .normal)
-        button.titleLabel?.font = UIFont(name: "SFProDisplay-Regular", size: 36)
-        button.tintColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1) // todo
-//        button.font = UIFont(name: "SFProDisplay-Regular", size: 16)
-//        button.textColor = #colorLiteral(red: 0.5882352941, green: 0.5843137255, blue: 0.6078431373, alpha: 1)
+        button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
+        button.setTitle("Обработка...", for: .highlighted)
+        button.setTitleColor(#colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1), for: .highlighted)
         
         return button
     }()
@@ -49,11 +49,11 @@ class FooterDetailView: UIView {
     }
     
     func setup() {
-        // setup title
-//        label.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-//        label.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-//        label.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-//        label.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        // setup button
+        button.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        button.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.66).isActive = true
+        button.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         // setup description
         desc.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
