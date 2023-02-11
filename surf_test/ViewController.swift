@@ -43,8 +43,8 @@ class ViewController: UIViewController {
     
     @objc func showAlert(notification: Notification) {
         if notification.name == Notification.Name.notificationFromFooterDetailView {
-            let alertController = UIAlertController(title: "1", message: "2", preferredStyle: .alert)
-            let action = UIAlertAction(title: "3", style: .default, handler: { action in
+            let alertController = UIAlertController(title: "Поздравляем!", message: "Ваша заявка успешно отправлена!", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Закрыть", style: .default, handler: { action in
                 print("action")
             })
             
