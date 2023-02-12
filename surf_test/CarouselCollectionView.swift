@@ -54,7 +54,7 @@ class CarouselCollectionView: UICollectionView {
         cells = cells.filter({ $0.button.id != item.button.id })
         cells.insert(item, at: 0)
         scrollRectToVisible(CGRect(x: 0, y: 0, width: 100, height: 100), animated: true)
-        
+
         self.reloadData()
     }
 }
@@ -84,4 +84,6 @@ extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDat
         let newWidth = ((numberOfSymbols < 4 ? 4 : numberOfSymbols) + 3) * 10
         return CGSize(width: newWidth, height: Int(Constants.heightCarouselItem))
     }
+    
+    
 }
