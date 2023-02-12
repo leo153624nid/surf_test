@@ -58,10 +58,6 @@ class CarouselCollectionView: UICollectionView {
 
 extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cells.count
     }
@@ -69,9 +65,11 @@ extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: CarouselCollectionViewCell.reusedId, for: indexPath) as! CarouselCollectionViewCell
         
+//        cell.button.setTitle(cells[indexPath.row].button.title(for: .normal), for: .normal)
+//        cell.button.id = cells[indexPath.row].button.id
+//        cell.button.buttonIsOn = cells[indexPath.row].button.buttonIsOn
+        cell.button = cells[indexPath.row].button
         cell.button.setTitle(cells[indexPath.row].button.title(for: .normal), for: .normal)
-        cell.button.id = cells[indexPath.row].button.id
-        cell.button.buttonIsOn = cells[indexPath.row].button.buttonIsOn
         
         cell.button.addTarget(self, action: #selector(buttonIsPress), for: .touchDown)
         cell.button.addTarget(self, action: #selector(buttonIsTap), for: .touchUpInside)
