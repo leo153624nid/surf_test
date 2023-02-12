@@ -49,6 +49,9 @@ class CarouselCollectionView: UICollectionView {
             cells.forEach({ $0.button.buttonIsOn = false })
         }
         item.button.buttonIsOn.toggle()
+        cells = cells.filter({ $0.button.id != item.button.id })
+        cells.insert(item, at: 0)
+        scrollRectToVisible(CGRect(x: 0, y: 0, width: 100, height: 100), animated: true)
         self.reloadData()
     }
 }
