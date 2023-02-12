@@ -16,7 +16,7 @@ class DetailView: UIView {
     init() {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)
+        self.backgroundColor = Constants.whiteColor
         self.layer.cornerRadius = 30
         
         self.addSubview(headerDetailView)
@@ -49,5 +49,4 @@ class DetailView: UIView {
         footerDetailView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
         footerDetailView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20).isActive = true
     }
-    
 }

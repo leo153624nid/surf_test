@@ -16,7 +16,7 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)
+        self.backgroundColor = Constants.whiteColor
         
         contentView.addSubview(button)
         
@@ -29,9 +29,9 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     
     func setup() {
         // setup button
-        button.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
-        button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
-        button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
+        button.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        button.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        button.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         button.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
 
     }

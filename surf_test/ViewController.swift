@@ -22,13 +22,10 @@ class ViewController: UIViewController {
         setupMainView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(showAlert), name: .notificationFromFooterDetailView, object: nil)
-        
-        
     }
     
     func setupMainView() {
-//        let detailHeight = (UIScreen.main.bounds.height - mainImageView.bounds.height + 130) > 334 ? (UIScreen.main.bounds.height - mainImageView.bounds.height + 130) : 334
-        let detailHeight : CGFloat = 360
+        let heightDetailView = (UIScreen.main.bounds.height - mainImageView.bounds.height + 72) > Constants.minHeightDetailView ? (UIScreen.main.bounds.height - mainImageView.bounds.height + 72) : Constants.minHeightDetailView
         
         // setup MainImageView
         mainImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -39,7 +36,7 @@ class ViewController: UIViewController {
         detailView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         detailView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         detailView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        detailView.heightAnchor.constraint(equalToConstant: detailHeight).isActive = true
+        detailView.heightAnchor.constraint(equalToConstant: heightDetailView).isActive = true
     }
     
     @objc func showAlert(notification: Notification) {
@@ -53,8 +50,6 @@ class ViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
     }
-
-
 }
 
 extension Notification.Name {

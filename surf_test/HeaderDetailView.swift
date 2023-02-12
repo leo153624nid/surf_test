@@ -14,7 +14,7 @@ class HeaderDetailView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Стажировка в Surf"
         label.font = UIFont(name: "SFProDisplay-Bold", size: 27)
-        label.textColor = #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1)
+        label.textColor = Constants.blackColor
         
         return label
     }()
@@ -29,7 +29,7 @@ class HeaderDetailView: UIView {
         label.adjustsFontSizeToFitWidth = true
         label.sizeToFit()
         label.textAlignment = .natural
-        label.textColor = #colorLiteral(red: 0.5882352941, green: 0.5843137255, blue: 0.6078431373, alpha: 1)
+        label.textColor = Constants.darkGreyColor
         
         return label
     }()
@@ -37,13 +37,12 @@ class HeaderDetailView: UIView {
     init() {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)
+        self.backgroundColor = Constants.whiteColor
         
         self.addSubview(title)
         self.addSubview(desc)
         
         setup()
-        
     }
     
     required init?(coder: NSCoder) {

@@ -15,7 +15,7 @@ class CarouselCollectionView: UICollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         super.init(frame: .zero, collectionViewLayout: layout)
-        self.backgroundColor = #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)
+        self.backgroundColor = Constants.whiteColor
         
         delegate = self
         dataSource = self
@@ -44,14 +44,17 @@ class CarouselCollectionView: UICollectionView {
         guard let item = cells.filter({ $0.button.id == sender.id }).first else {
             return
         }
+        
         sender.buttonIsOn.toggle()
         if sender.buttonIsOn {
             cells.forEach({ $0.button.buttonIsOn = false })
         }
         item.button.buttonIsOn.toggle()
+        
         cells = cells.filter({ $0.button.id != item.button.id })
         cells.insert(item, at: 0)
         scrollRectToVisible(CGRect(x: 0, y: 0, width: 100, height: 100), animated: true)
+        
         self.reloadData()
     }
 }
@@ -79,10 +82,6 @@ extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDat
         
         let numberOfSymbols = cells[indexPath.row].button.title(for: .normal)?.count ?? 4
         let newWidth = ((numberOfSymbols < 4 ? 4 : numberOfSymbols) + 3) * 10
-        return CGSize(width: newWidth, height: 50)
+        return CGSize(width: newWidth, height: Int(Constants.heightCarouselItem))
     }
-    
-    
-    
-    
 }

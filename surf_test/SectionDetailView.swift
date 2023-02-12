@@ -14,7 +14,7 @@ class SectionDetailView: UIView {
     init() {
         super.init(frame: .zero)
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.backgroundColor = Constants.whiteColor
         
         self.addSubview(carousel)
         
@@ -27,10 +27,9 @@ class SectionDetailView: UIView {
     
     func setup() {
         // setup carousel
-        carousel.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
-        carousel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
-        carousel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-        carousel.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        carousel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        carousel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        carousel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        carousel.heightAnchor.constraint(equalToConstant: Constants.heightCarouselItem).isActive = true
     }
-
 }
