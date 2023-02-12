@@ -15,7 +15,6 @@
 		FACB8BB42996351B00B2E7DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACB8BB22996351B00B2E7DD /* LaunchScreen.storyboard */; };
 		FACB8BBD2996635900B2E7DD /* MainImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BBC2996635900B2E7DD /* MainImageView.swift */; };
 		FACB8BC029967DD100B2E7DD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BBF29967DD100B2E7DD /* DetailView.swift */; };
-		FACB8BC32996904D00B2E7DD /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BC22996904D00B2E7DD /* FooterView.swift */; };
 		FACB8BC62996ABB600B2E7DD /* HeaderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BC52996ABB600B2E7DD /* HeaderDetailView.swift */; };
 		FACB8BCD2996B7F400B2E7DD /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = FACB8BCC2996B7F400B2E7DD /* SF-Pro-Display-Regular.otf */; };
 		FACB8BD12996B9FD00B2E7DD /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FACB8BD02996B9FD00B2E7DD /* SF-Pro-Display-Bold.otf */; };
@@ -38,7 +37,6 @@
 		FACB8BB52996351B00B2E7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FACB8BBC2996635900B2E7DD /* MainImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageView.swift; sourceTree = "<group>"; };
 		FACB8BBF29967DD100B2E7DD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		FACB8BC22996904D00B2E7DD /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		FACB8BC52996ABB600B2E7DD /* HeaderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailView.swift; sourceTree = "<group>"; };
 		FACB8BCC2996B7F400B2E7DD /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		FACB8BD02996B9FD00B2E7DD /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				FACB8BA72996351800B2E7DD /* AppDelegate.swift */,
 				FACB8BA92996351800B2E7DD /* SceneDelegate.swift */,
 				FACB8BAB2996351800B2E7DD /* ViewController.swift */,
-				FACB8BC22996904D00B2E7DD /* FooterView.swift */,
 				FACB8BBF29967DD100B2E7DD /* DetailView.swift */,
 				FACB8BD92996CA7C00B2E7DD /* FooterDetailView.swift */,
 				FACB8BD62996C97200B2E7DD /* SectionDetailView.swift */,
@@ -187,7 +184,6 @@
 				FACB8BAC2996351800B2E7DD /* ViewController.swift in Sources */,
 				FACB8BBD2996635900B2E7DD /* MainImageView.swift in Sources */,
 				FACB8BA82996351800B2E7DD /* AppDelegate.swift in Sources */,
-				FACB8BC32996904D00B2E7DD /* FooterView.swift in Sources */,
 				FACB8BE32998CADE00B2E7DD /* CarouselCollectionViewCell.swift in Sources */,
 				FACB8BC62996ABB600B2E7DD /* HeaderDetailView.swift in Sources */,
 				FACB8BD72996C97200B2E7DD /* SectionDetailView.swift in Sources */,
