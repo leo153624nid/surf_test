@@ -11,7 +11,7 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     
     static let reusedId = "CarouselCollectionViewCell"
     
-    var button = CustomButton(title: "1", id: 0)
+    var button = CustomButton(title: "1")
     
     override init(frame: CGRect) {
         super.init(frame: frame)
