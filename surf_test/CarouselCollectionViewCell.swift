@@ -18,7 +18,7 @@ class CarouselCollectionViewCell: UICollectionViewCell {
         self.translatesAutoresizingMaskIntoConstraints = false
         self.backgroundColor = #colorLiteral(red: 0.9999127984, green: 1, blue: 0.9998814464, alpha: 1)
         
-        self.addSubview(button)
+        contentView.addSubview(button)
         
         setup()
     }
