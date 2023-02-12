@@ -19,6 +19,7 @@ class CarouselCollectionView: UICollectionView {
         
         delegate = self
         dataSource = self
+        prefetchDataSource = self
         
         register(CarouselCollectionViewCell.self, forCellWithReuseIdentifier: CarouselCollectionViewCell.reusedId)
         
@@ -84,6 +85,18 @@ extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDat
         let newWidth = ((numberOfSymbols < 4 ? 4 : numberOfSymbols) + 3) * 10
         return CGSize(width: newWidth, height: Int(Constants.heightCarouselItem))
     }
-    
-    
+}
+
+extension CarouselCollectionView: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
+        for index in indexPaths {
+            if index.row >= cells.count - 3 {
+                cells.append(contentsOf: CarouselItem.fetchCarouselData())
+                print(cells.count)
+                self.reloadData()
+                break
+            }
+        }
+    }
 }

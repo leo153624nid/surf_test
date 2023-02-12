@@ -55,3 +55,5 @@ class ViewController: UIViewController {
 extension Notification.Name {
     static let notificationFromFooterDetailView = Notification.Name("notificationFromFooterDetailView")
 }
+
+
