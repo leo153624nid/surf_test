@@ -11,7 +11,7 @@ class CarouselCollectionViewCell: UICollectionViewCell {
     
     static let reusedId = "CarouselCollectionViewCell"
     
-    var button = CustomButton(title: "")
+    var button = CustomButton(title: "1", id: 0)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +32,8 @@ class CarouselCollectionViewCell: UICollectionViewCell {
         button.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 44).isActive = true
+//        button.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        button.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
 
     }
     
