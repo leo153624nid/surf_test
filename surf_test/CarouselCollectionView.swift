@@ -8,11 +8,16 @@
 import UIKit
 
 class CarouselCollectionView: UICollectionView {
+    
+    let cells
 
     init() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         super.init(frame: .zero, collectionViewLayout: layout)
+        
+        delegate = self
+        dataSource = self
         
     }
     
