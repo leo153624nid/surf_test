@@ -27,7 +27,8 @@ class ViewController: UIViewController {
     }
     
     func setupMainView() {
-        let detailHeight = (UIScreen.main.bounds.height - mainImageView.bounds.height + 130) > 276 ? (UIScreen.main.bounds.height - mainImageView.bounds.height + 130) : 276
+//        let detailHeight = (UIScreen.main.bounds.height - mainImageView.bounds.height + 130) > 334 ? (UIScreen.main.bounds.height - mainImageView.bounds.height + 130) : 334
+        let detailHeight : CGFloat = 360
         
         // setup MainImageView
         mainImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
