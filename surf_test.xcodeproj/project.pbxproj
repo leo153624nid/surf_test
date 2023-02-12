@@ -24,6 +24,7 @@
 		FACB8BDA2996CA7C00B2E7DD /* FooterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BD92996CA7C00B2E7DD /* FooterDetailView.swift */; };
 		FACB8BDD2998C06D00B2E7DD /* CarouselCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BDC2998C06D00B2E7DD /* CarouselCollectionView.swift */; };
 		FACB8BE02998C5A500B2E7DD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BDF2998C5A500B2E7DD /* Model.swift */; };
+		FACB8BE32998CADE00B2E7DD /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACB8BE22998CADE00B2E7DD /* CarouselCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		FACB8BD92996CA7C00B2E7DD /* FooterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterDetailView.swift; sourceTree = "<group>"; };
 		FACB8BDC2998C06D00B2E7DD /* CarouselCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionView.swift; sourceTree = "<group>"; };
 		FACB8BDF2998C5A500B2E7DD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FACB8BE22998CADE00B2E7DD /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				FACB8BD92996CA7C00B2E7DD /* FooterDetailView.swift */,
 				FACB8BD62996C97200B2E7DD /* SectionDetailView.swift */,
 				FACB8BDC2998C06D00B2E7DD /* CarouselCollectionView.swift */,
+				FACB8BE22998CADE00B2E7DD /* CarouselCollectionViewCell.swift */,
 				FACB8BDF2998C5A500B2E7DD /* Model.swift */,
 				FACB8BC52996ABB600B2E7DD /* HeaderDetailView.swift */,
 				FACB8BBC2996635900B2E7DD /* MainImageView.swift */,
@@ -185,6 +188,7 @@
 				FACB8BBD2996635900B2E7DD /* MainImageView.swift in Sources */,
 				FACB8BA82996351800B2E7DD /* AppDelegate.swift in Sources */,
 				FACB8BC32996904D00B2E7DD /* FooterView.swift in Sources */,
+				FACB8BE32998CADE00B2E7DD /* CarouselCollectionViewCell.swift in Sources */,
 				FACB8BC62996ABB600B2E7DD /* HeaderDetailView.swift in Sources */,
 				FACB8BD72996C97200B2E7DD /* SectionDetailView.swift in Sources */,
 				FACB8BDD2998C06D00B2E7DD /* CarouselCollectionView.swift in Sources */,

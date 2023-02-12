@@ -9,7 +9,7 @@ import UIKit
 
 class CarouselCollectionView: UICollectionView {
     
-    let cells
+    let cells = [CarouselModel]()
 
     init() {
         let layout = UICollectionViewFlowLayout()
@@ -18,6 +18,10 @@ class CarouselCollectionView: UICollectionView {
         
         delegate = self
         dataSource = self
+        
+        register(CarouselCollectionViewCell.self, forCellWithReuseIdentifier: CarouselCollectionViewCell.reusedId)
+        
+        translatesAutoresizingMaskIntoConstraints = false
         
     }
     
@@ -29,11 +33,14 @@ class CarouselCollectionView: UICollectionView {
 
 extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+//        return cells.count
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = dequeueReusableCell(withReuseIdentifier: CarouselCollectionViewCell.reusedId, for: indexPath)
+        
+        return cell
     }
     
     
