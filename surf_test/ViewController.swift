@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        detailView.sectionDetailView.carousel.setCells(array: CarouselItem.fetchCarouselData())
         
         view.addSubview(mainImageView)
         view.addSubview(detailView)
@@ -21,6 +22,8 @@ class ViewController: UIViewController {
         setupMainView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(showAlert), name: .notificationFromFooterDetailView, object: nil)
+        
+        
     }
     
     func setupMainView() {
