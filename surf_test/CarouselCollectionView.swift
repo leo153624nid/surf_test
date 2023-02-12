@@ -81,7 +81,9 @@ extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 50) // todo
+
+        let newWidth = ((cells[indexPath.row].button.title(for: .normal)?.count ?? 4) + 4) * 10
+        return CGSize(width: newWidth, height: 50)
     }
     
     

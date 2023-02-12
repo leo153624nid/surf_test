@@ -32,7 +32,6 @@ class CarouselCollectionViewCell: UICollectionViewCell {
         button.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
         button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0).isActive = true
         button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0).isActive = true
-//        button.heightAnchor.constraint(equalToConstant: 44).isActive = true
         button.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
 
     }
