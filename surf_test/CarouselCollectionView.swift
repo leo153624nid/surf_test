@@ -48,12 +48,11 @@ class CarouselCollectionView: UICollectionView {
         
         item.button.buttonIsOn.toggle()
         sender.buttonIsOn.toggle()
-        self.reloadData()
 
         sender.backgroundColor = sender.buttonIsOn ? #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1) : #colorLiteral(red: 0.9529411765, green: 0.9529411765, blue: 0.9607843137, alpha: 1)
         sender.setTitleColor(sender.buttonIsOn ? #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) : #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1) , for: .normal)
-
         
+        self.reloadData()
     }
 }
 
@@ -81,8 +80,9 @@ extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        let newWidth = ((cells[indexPath.row].button.title(for: .normal)?.count ?? 4) + 4) * 10
+        
+        let numberOfSymbols = cells[indexPath.row].button.title(for: .normal)?.count ?? 4
+        let newWidth = ((numberOfSymbols < 4 ? 4 : numberOfSymbols) + 3) * 10
         return CGSize(width: newWidth, height: 50)
     }
     
