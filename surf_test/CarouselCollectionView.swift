@@ -36,6 +36,29 @@ class CarouselCollectionView: UICollectionView {
         self.cells = array
     }
     
+    @objc func buttonIsPress(sender: CustomButton) {
+        print("button is pressed")
+    }
+
+    @objc func buttonIsTap(sender: CustomButton) {
+        print("button is tapped")
+       
+        sender.buttonIsOn.toggle()
+        sender.backgroundColor = sender.buttonIsOn ? #colorLiteral(red: 0.1921568627, green: 0.1921568627, blue: 0.1921568627, alpha: 1) : #colorLiteral(red: 0.9529411765, green: 0.9529411765, blue: 0.9607843137, alpha: 1)
+       
+        
+//        if cells.filter({ $0.buttonIsOn }).count == 0 {
+////            print(sender.isHighlighted)
+//            sender.isHighlighted = false
+//            print(sender.state.rawValue)
+////            print(sender.isHighlighted)
+//        } else {
+//            sender.isHighlighted = true
+//        }
+    }
+    
+
+    
 }
 
 extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -45,7 +68,11 @@ extension CarouselCollectionView : UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: CarouselCollectionViewCell.reusedId, for: indexPath) as! CarouselCollectionViewCell
+        
         cell.button.setTitle(cells[indexPath.row].buttonTitle, for: .normal)
+        cell.button.addTarget(self, action: #selector(buttonIsPress), for: .touchDown)
+        cell.button.addTarget(self, action: #selector(buttonIsTap), for: .touchUpInside)
+        
         
         return cell
     }
